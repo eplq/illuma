@@ -26,4 +26,7 @@ controller.setCallback((state) => {
 controller.start();
 
 controller.addEffect(new Show({ r: 255, g: 0, b: 0 }));
+controller.addEffect(new Move({ r: 0, g: 255, b: 0 }, 5));
+controller.addEffect(new Move({ r: 0, g: 255, b: 0 }, 10));
+controller.addEffect(new Move({ r: 0, g: 255, b: 0 }, 15));
 controller.addEffect(new Move({ r: 0, g: 255, b: 0 }));

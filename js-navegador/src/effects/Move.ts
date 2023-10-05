@@ -8,9 +8,12 @@ export class Move implements Effect {
     color: Color = { r: 0, g: 0, b: 0 }
 
     counter: number = 0
+    period: number = 1
 
-    constructor(color: Color) {
+    constructor(color: Color, offset: number = 0, period: number = 1) {
         this.color = color;
+        this.counter = offset;
+        this.period = period;
     }
 
     update(previous: Array<Color>): Array<Color> {
