@@ -1,27 +1,14 @@
 import { Controller } from "./controller";
+import { setup } from "./displays/divs";
 import { Move } from "./effects/Move";
 import { Show } from "./effects/Show";
 
 const NUMBER_OF_LEDS = 50;
-const LEDS: Array<HTMLDivElement> = [];
-
-const app = document.getElementById("app");
-for (let i = 0; i < NUMBER_OF_LEDS; i++) {
-    const newElement = document.createElement("div");
-    newElement.classList.add("led");
-
-    app!.appendChild(newElement);
-
-    LEDS.push(newElement);
-}
 
 const controller = new Controller(NUMBER_OF_LEDS);
+const callback = setup(NUMBER_OF_LEDS);
 
-controller.setCallback((state) => {
-    state.forEach((color, index) => {
-        LEDS[index].style.backgroundColor = `rgb(${color.r}, ${color.g}, ${color.b})`;
-    });
-});
+controller.setCallback(callback);
 
 controller.start();
 
