@@ -1,9 +1,9 @@
 import { Controller } from "./controller";
-import { setup } from "./displays/divs";
+import { setup } from "./displays/canvas";
 import { Move } from "./effects/Move";
 import { Show } from "./effects/Show";
 
-const NUMBER_OF_LEDS = 50;
+const NUMBER_OF_LEDS = 150;
 
 const controller = new Controller(NUMBER_OF_LEDS);
 const callback = setup(NUMBER_OF_LEDS);
