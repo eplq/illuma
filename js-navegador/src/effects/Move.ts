@@ -17,9 +17,9 @@ export class Move implements Effect {
     }
 
     update(previous: Array<Color>): Array<Color> {
-        previous[this.counter] = this.color;
+        previous[Math.floor(this.counter)] = this.color;
         
-        this.counter++;
+        this.counter += this.period;
         if (this.counter >= previous.length) this.counter = 0;
 
         return previous;
