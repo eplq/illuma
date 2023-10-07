@@ -46,7 +46,7 @@ export class Controller {
 
         this.interval = setInterval(() => {
             this.callback(this.update());
-        }, 1000 / 60);
+        }, 1000 / 200);
     }
 
     stop() {
