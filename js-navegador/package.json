@@ -11,5 +11,9 @@
   "devDependencies": {
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@types/meyda": "^4.3.4",
+    "meyda": "^5.6.2"
   }
 }
