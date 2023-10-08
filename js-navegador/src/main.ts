@@ -1,5 +1,6 @@
 import { Controller } from "./controller";
 import { setup } from "./displays/canvas";
+import { Flash } from "./effects/Flash";
 import { Move } from "./effects/Move";
 import { Show } from "./effects/Show";
 
@@ -14,3 +15,4 @@ controller.start();
 
 controller.addEffect(new Show({ r: 0, g: 0, b: 0 }));
 controller.addEffect(new Move({ r: 0, g: 255, b: 0 }, 15, 1, 100));
+controller.addEffect(new Flash(5));
