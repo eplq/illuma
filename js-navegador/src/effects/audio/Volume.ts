@@ -27,7 +27,6 @@ export class Volume implements Effect {
     }
 
     volumeUpdate(volume: number) {
-        console.log(volume);
         this.currentVolume = volume;
     }
 
